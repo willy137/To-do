@@ -1,0 +1,60 @@
+extends layout
+
+block style 
+    link(rel='stylesheet', href='/stylesheets/tareas.css')
+block script 
+    script(src="/javascripts/tareas.js" defer) 
+block content
+    h5#id #{lista.id_lista}
+    h1 Lista #{lista.titulo} 
+    div.volver
+        if(lista.activa==0)
+            a(href="/todo"+"/archivadas") Regresar
+        else 
+            a(href="/todo") Pagina principal
+    div#agregar
+        h2 Tareas
+        br
+        label(for="titulo") Titulo 
+        input(type="text", id="titulo"  )
+        label(for="") detalles
+        input(type="text" id="descripcion")   
+        label(for="priori") Prioridad 
+        select(name="prioridad" id="priori")
+            option(value="Baja") Baja
+            option(value="Media") Media
+            option(value="Alta") Alta
+        label(for="fechLim") Fecha Limite
+        input(type="Date" id="fechlim")     
+        input(type="button" onclick="agregar()" value="Agregar" )
+    ul#aviso
+    div.orden
+        select#orden(onchange="orden(this.value)")
+            option(value="") ordenar 
+            option(value="fechaC") Fecha creacion
+            option(value="fechaL") Fecha limite
+            option(value="priori") Prioridad
+
+    h3  Tareas:
+    ul#tareas 
+        each dat in tarea   
+            li(id="item")
+                h6 id: #{dat.id_items}
+                p #{dat.titulo}
+                p(id="creada") Creada:#{dat.fecha_creacion}
+                if dat.fecha_resolucion !== null
+                    p Resuelta: #{dat.fecha_resolucion}
+                else 
+                    p Resuelta: Sin resolver
+                p.det Detalles:  #{dat.descripcion}
+                if(dat.prioridad=="Baja")
+                    p.baja Prioridad: #{dat.prioridad}
+                else if(dat.prioridad=="Media")
+                    p.media Prioridad: #{dat.prioridad}
+                else
+                    p.alta Prioridad: #{dat.prioridad}
+                p Fecha Limite:#{dat.fecha_limite}
+                p.estado Estado: #{dat.estado}
+                a.link(href=`javascript:eliminar(${dat.id_items})`) Borrar
+                a.link2(href=`javascript:modificar(${dat.id_items})`)  Modificar
+    

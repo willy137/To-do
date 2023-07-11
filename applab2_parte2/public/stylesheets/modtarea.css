@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body{
+    background-color: #80c67196;
+}
+.formato{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+}
+.formato>input{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px ;
+}
+.formato>select{
+    margin-bottom: 10px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+#envia{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin: auto;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+.confirmar{
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    color: #0e6277;
+    width: 350px;
+    height: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+#des{
+    height: 70px;
+    word-break: break-word;
+}
+.regreso{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 50px;
+}

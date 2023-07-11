@@ -1,0 +1,19 @@
+extends layout
+block style 
+    link(rel='stylesheet', href='/stylesheets/regis.css')
+block script 
+    script(src="/javascripts/registrar.js" defer) 
+block content
+    div#aviso
+    div.registrar
+        div.regis
+            h3 Registrarse
+            label(for="user") Nombre Usuario 
+            input(type="text" id="user")
+            label(for="nombre") Nombre-Completo
+            input(type="text" id="namec")
+            label(for="Pas") Contraseña
+            input(type="password" id="password") 
+            button(onclick="registrado()") Registrarse
+            div.link
+                a(href="login") login

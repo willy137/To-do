@@ -1,0 +1,30 @@
+extends layout
+block style 
+    link(rel='stylesheet', href='/stylesheets/archivada.css')
+block script 
+        script(src="/javascripts/archi.js" defer) 
+block content
+    h2 Listas Archivadas
+    div 
+        a.regre(href="/todo") Regresar 
+    div#cabecera
+    table 
+        th.id2  id_lista
+        th  Titulo 
+        th  Fecha creacion
+        th  Fecha resolucion 
+        th  Tareas 
+        th  Estado
+
+    ul#lista
+        each dat in listas 
+            li(id="item"+dat.id_lista)
+                P.id #{dat.id_lista}
+                p #{dat.titulo}
+                p #{dat.fecha_creacion}
+                if dat.fecha_resolucion !== null
+                    p#reso  #{dat.fecha_resolucion}
+                else    
+                    p#reso  sin fecha
+                a.link(href=`javascript:listar(${dat.id_lista})`) ver tareas
+                p #{dat.estado}

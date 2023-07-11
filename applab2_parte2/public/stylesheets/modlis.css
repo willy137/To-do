@@ -1,0 +1,49 @@
+body{
+    background:linear-gradient(45deg,#5fb9c5d5,#94e799);
+    height: 100vh;
+}
+.espacio{
+    height: 150px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+}
+.formu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+form>input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#but{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.button{
+    width: 70px;
+}
+#respuesta{
+    display: flex;
+    justify-content: center;
+}
+#respuesta>p{
+    width: 450px;
+    border: 1px solid;
+    background-color: #ffffff;
+}
+.regreso{
+    display: flex;
+    flex-direction: row-reverse;
+}

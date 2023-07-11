@@ -1,0 +1,90 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  background:linear-gradient(45deg,#3e94a0d5,#7ee985);
+  background-size: 400%,400%;
+  position: relative;
+}
+li{
+  border:1px solid;
+}
+.agregar{
+  border: 1px solid;
+  border-radius: 10px;
+  width: 300px;
+}
+.agregar>h4{
+  margin: auto;
+  margin-left:100px;
+}
+.agregar>input{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+li>p{
+  display: inline-flex;
+  justify-content: center;
+  width: 150px;
+  color: #000000;
+}
+#cabecera{
+  display: flex;
+  margin: 40px;
+  height: 20px;
+}
+#cabecera>h6{
+  display: inline-flex;
+  font-size: larger;
+  width: 150px;
+
+}
+.link{
+  color:#3452d8;
+  margin-left: 40px;
+  margin-right: 30px;
+}
+.actualizar{
+  margin-left: 60px;
+  margin-right: 50px;
+  color:#3452d8;
+}
+.id{
+  width: 70px;
+}
+#reso{
+  width: 120px;
+}
+.id2{
+  width: 70px;
+  display: inline-flex;
+  margin-left: 40px;
+}
+th{
+  width: 145px;
+}
+#aviso{
+  width: 300px;
+  background-color: #aadbc4;
+}
+.archi>a:hover{
+  color: #742ab9;
+}
+.cerrar{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.cerrar>a>button{
+  background-color: #568ddd5e;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.cerrar>a>button:hover{
+  background-color: #568cdda1;
+
+}
+.medio{
+  display: flex;
+  justify-content: center;
+}

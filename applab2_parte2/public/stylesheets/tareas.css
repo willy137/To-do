@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+body{
+    height: max-content;
+    background: linear-gradient(45deg,#379bdd96,#80c67196);
+}
+#agregar>input{
+    margin: 3px;
+}
+#agregar>label{
+    margin: 4px;
+}
+.volver{
+    display: flex;
+    flex-direction: row-reverse;
+}
+h1{
+    color: #411c7e;
+    margin: 0px;
+}
+h2{
+    margin: 0px;
+    font-size: large;
+    font-family: 'DM Serif Display', serif;
+}
+h5{
+    visibility: hidden;
+    margin: 0px;
+}
+.orden{
+    display: flex;
+    flex-direction: row-reverse;
+}
+li{
+    border: 1px solid;
+    width: 400px;
+    display: inline-table;
+    margin: 5px;
+    background: #fdfdfd;
+}
+.det{
+    height: 100px;
+}
+li>p{
+    display: flex;
+    justify-content: center;
+    word-break: break-word;
+}
+h6{
+    margin: 0px;
+    font-size: medium;
+}
+.baja{
+    color: green;
+}
+.media{
+    color:rgb(133, 133, 31);
+}
+.alta{
+    color: red;
+}
+.link{
+    color: #411c7e;
+}
+.link2{
+    color: #411c7e;
+    margin-left: 280px;
+}
+.aviso{
+    color: red;
+}

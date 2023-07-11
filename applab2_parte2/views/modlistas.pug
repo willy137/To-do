@@ -1,0 +1,25 @@
+extends layout 
+block style 
+    link(rel='stylesheet', href='/stylesheets/modlis.css')
+block script 
+    script(src="/javascripts/modli.js" defer) 
+block content
+    div#respuesta
+    div.espacio
+    h2 Modificacion de la Lista  #{lis.id_lista}
+    div.formu
+        div.form
+            input(type="text" id="id" value=`${lis.id_lista}` hidden)
+            label(for="titulo") Titulo:  
+            input(type="text" id="titulo" name="titulo" value=`${lis.titulo}`)
+            label(for="estado") Estado:   
+            if(lis.estado=="Sin resolver")
+                select(name="estado" id="estado")
+                    option(value="Sin resolver") Sin resolver 
+                    option(value="Resuelto")    Resuelto
+            else 
+                p(id="estado") Resuelto
+            div#but
+                button.button( id="envia" onclick="modificar()") Modificar
+    div.regreso
+        a(href="/todo") Regresar 

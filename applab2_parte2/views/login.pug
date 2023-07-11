@@ -1,0 +1,16 @@
+extends layout
+block style 
+    link(rel='stylesheet', href='/stylesheets/login.css')
+block script 
+    script(src="/javascripts/login.js" defer) 
+block content
+    div#aviso 
+    div.registrar
+
+        div.login
+            h3 Login
+            input(type="text" id="user" placeholder="Usuario")
+            input(type="password" id="password" placeholder="Contraseña") 
+            button(onclick="logearse()") Ingresar
+            div.link
+                a(href="regis") registrarse    

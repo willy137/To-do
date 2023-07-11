@@ -1,0 +1,45 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100vh;
+    background:linear-gradient(45deg,#3e94a0d5,#7ee985);
+    background-size: 400%,400%;
+    position: relative;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  li{
+    border:1px solid;
+    width: 800px;
+    background-color: #92f59954;
+  }
+  li>p{
+    display: inline-flex;
+    justify-content: center;
+    width: 125px;
+    color: #000000;
+  }
+  #cabecera{
+    display: flex;
+    margin: 40px;
+    height: 20px;
+  }
+.regre{
+    display: flex;
+    flex-direction: row-reverse;
+}
+table{
+    display: flex;
+    justify-content: center;
+}
+th{
+    width: 120px;
+}
+.link{
+    margin-left: 40px;
+    margin-right: 20px;
+
+}

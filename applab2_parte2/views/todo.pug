@@ -1,0 +1,54 @@
+extends layout
+block style 
+    link(rel='stylesheet', href='/stylesheets/style.css')
+block script 
+    script(src="/javascripts/script.js" defer) 
+block content
+    if todo==1
+        p#user(hidden) #{lista[0].id_usuario}
+    else 
+        p#user(hidden) #{id}
+    div.cerrar
+        a(href="/users/logout" )
+            button(type="submit") Cerrar sesion
+    ul#aviso
+    div.medio
+        div.agregar
+            h4 Lista de Tareas 
+            br
+            input(type="text" name="item" id="item" placeHolder="Titulo" required)
+            button(type="submit" onclick="agregar()" ) agregar
+    div.archi
+        a.archi(href=`/todo/archivadas`) Listas Archivadas
+    div#cabecera
+    table 
+        th.id2  id_lista
+        th  Titulo 
+        th  Fecha creacion
+        th  Fecha resolucion 
+        th  Tareas 
+        th  Estado
+        th  Borrar 
+        th  Actualizar
+        th  Archivar 
+    ul#lista
+        each dat in lista
+            li(id="item"+dat.id_lista)
+                P.id #{dat.id_lista}
+                p #{dat.titulo}
+                p #{dat.fecha_creacion}
+                if dat.fecha_resolucion !== null
+                    p#reso  #{dat.fecha_resolucion}
+                else 
+                    p#reso  sin fecha
+                a.link(href=`javascript:item(${dat.id_lista})`) ver tareas
+                p #{dat.estado}
+                a.link(href=`javascript:borrado(${dat.id_lista})`) borrar
+                a.actualizar(href=`javascript:modifica(${dat.id_lista})`) Actualizar
+                a.link(href=`javascript:archivar(${dat.id_lista})`) Archivar
+  
+                
+
+     
+    
+    

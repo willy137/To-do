@@ -1,0 +1,44 @@
+extends layout
+block style 
+    link(rel='stylesheet', href='/stylesheets/modtarea.css')
+block script 
+    script(src="/javascripts/modtare.js" defer) 
+block content
+    ul#aviso
+
+    h2 Modificacion de la tarea #{item.id_items}
+
+    div.formato
+        input(type="text" id="id" value=`${item.id_items}` hidden)
+        label(for="nombre") Titulo
+        input(type="text"  id="nom" value=`${item.titulo}`)
+        label(for="descrip") Descripcion  
+        textarea(name="descrip" id="des", cols="30", rows="10" maxlength="400" ) #{item.descripcion} 
+        label(for="priori") Prioridad 
+        select(name="priori" id="priori") 
+            if(item.prioridad=="Baja")
+                option(value="Baja") Baja
+                option(value="Media")  Media
+                option(value="Alta")   Alta
+            else if(item.prioridad=="Media")
+                option(value="Media")  Media
+                option(value="Baja") Baja
+                option(value="Alta")  Alta
+            else 
+                option(value="Alta")  Alta
+                option(value="Media")  Media
+                option(value="Baja") Baja
+        label(for="fech") Fecha limite
+        input(type="Date" id="fech" value=`${item.fecha_limite}`)
+        label(for="estado") Estado
+        select(name="estado" id="estado")
+            if(item.estado=="Sin resolver")
+                 option(value="Sin resolver") Sin resolver 
+                 option(value="Resuelto")   Resuelto
+            else 
+                 option(value="Resuelto")  Resuelto
+        div#bton 
+    button( id="envia" onclick="actualizar()") Modificar
+    ul#errores
+    div#validado
+        a.regreso(href=`/item/tareas`)  Regresar
